@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Art Print</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <a class="brand" href="#top"><span data-logo="44"></span><span class="brandname">Art Print</span></a>
+  <nav aria-label="Asosiy menyu">
+    <a href="#shop">Do'kon</a>
+    <a href="#custom">Mening rasmim</a>
+    <a href="#reviews">Fikrlar</a>
+    <a href="#owner">Egasi</a>
+    <a href="#contact">Aloqa</a>
+  </nav>
+  <button class="cartbtn" id="openCart">Savat (<span id="count">0</span>)</button>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap hero-in">
+      <div>
+        <h1>Art Print</h1>
+        <div class="welcome">Xush kelibsiz!</div>
+        <p>Devoringiz uchun san'at. Kolleksiyadan rasm tanlang, internetdan toping yoki o'z suratingizni yuklang. Biz uni mos ramkaga solib beramiz.</p>
+        <a class="btn" href="#shop">Rasmlarni ko'rish</a><a class="btn alt" href="#custom">O'z rasmimni chop etish</a>
+        <div class="stats">
+          <div><strong>130+</strong><span>rasm</span></div>
+          <div><strong>14</strong><span>xil ramka</span></div>
+          <div><strong>3–5</strong><span>kunda yetkazish</span></div>
+        </div>
+      </div>
+      <div class="wall3" id="heroWall"></div>
+    </div>
+  </div>
+
+  <div class="marq" aria-hidden="true"><div class="track">
+    <span>Abstrakt</span><span>Geometrik</span><span>Minimal</span><span>Manzara</span><span>Tabiat</span><span>Foto</span>
+    <span>Abstrakt</span><span>Geometrik</span><span>Minimal</span><span>Manzara</span><span>Tabiat</span><span>Foto</span>
+    <span>Abstrakt</span><span>Geometrik</span><span>Minimal</span><span>Manzara</span><span>Tabiat</span><span>Foto</span>
+    <span>Abstrakt</span><span>Geometrik</span><span>Minimal</span><span>Manzara</span><span>Tabiat</span><span>Foto</span>
+  </div></div>
+
+  <section class="band b-shop" id="shop"><div class="wrap">
+    <h2>Tanlangan rasmlar</h2>
+    <p class="lead">Kolleksiyamizda 130 dan ortiq rasm bor. Hajm va ramkani o'zingiz tanlaysiz.</p>
+    <div class="grid" id="grid"></div>
+    <button class="btn more" id="moreBtn">Ko'proq takliflar</button>
+  </div></section>
+
+  <section class="band b-why"><div class="wrap">
+    <h2>Nega Art Print?</h2>
+    <div class="feats">
+      <div class="feat"><div class="ico">🖼️</div><h3>Sifatli qog'oz</h3><p>250 g/m² mat qog'oz. Ranglar yillar davomida o'chmaydi.</p></div>
+      <div class="feat"><div class="ico">🎨</div><h3>14 xil ramka</h3><p>Oddiy qoradan antik oltin ramkagacha. O'zingizga yoqqanini tanlang.</p></div>
+      <div class="feat"><div class="ico">🚚</div><h3>Tez yetkazish</h3><p>Toshkent bo'ylab 1–2 kun, butun O'zbekiston bo'ylab 3–5 kun.</p></div>
+      <div class="feat"><div class="ico">✨</div><h3>O'z rasmingiz</h3><p>Oilaviy surat yoki sayohat lahzasini devor san'atiga aylantiring.</p></div>
+    </div>
+  </div></section>
+
+  <section class="band b-custom" id="custom"><div class="wrap">
+    <h2>Mening rasmim</h2>
+    <p class="lead">Uch qadamda o'z suratingizni devor san'atiga aylantiring. Natijani darhol xonada ko'rasiz.</p>
+    <div class="custom">
+      <div class="room">
+        <div class="prev" id="prev"></div>
+        <svg class="sofa" viewBox="0 0 300 92" aria-hidden="true"><rect x="45" y="14" width="210" height="40" rx="14" fill="#7358ff"/><rect x="20" y="30" width="260" height="50" rx="14" fill="#5b3df5"/><rect x="0" y="38" width="40" height="46" rx="14" fill="#4a30d0"/><rect x="260" y="38" width="40" height="46" rx="14" fill="#4a30d0"/><rect x="32" y="84" width="9" height="8" fill="#1b1630"/><rect x="259" y="84" width="9" height="8" fill="#1b1630"/></svg>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <h3><b>1</b>Suratni tanlang</h3>
+          <label class="drop" id="drop" for="file"><span class="ico">📷</span><strong>Suratni shu yerga tashlang</strong><span>yoki bosib tanlang (JPG, PNG, WEBP, 10 MB gacha)</span></label>
+          <input class="vh" type="file" id="file" accept="image/*">
+          <button class="btn alt net" id="netBtn">Internetdan tanlash</button>
+          <div class="err" id="fileErr"></div>
+        </div>
+        <div class="step">
+          <h3><b>2</b>Nom va hajm</h3>
+          <label for="ctitle">Nomi</label>
+          <input type="text" id="ctitle" value="Mening rasmim" maxlength="40">
+          <label for="csize">Hajmi</label>
+          <select id="csize"></select>
+        </div>
+        <div class="step">
+          <h3><b>3</b>Ramkani tanlang</h3>
+          <div class="swatches" id="swatches"></div>
+        </div>
+        <div class="buy">
+          <div class="total">Jami: <span id="ctotal"></span></div>
+          <button class="btn" id="addCustom" disabled>Rasmimni savatga qo'shish</button>
+        </div>
+      </div>
+    </div>
+  </div></section>
+
+  <section class="band b-reviews" id="reviews"><div class="wrap">
+    <div class="rv" data-pid="0"></div>
+  </div></section>
+
+  <section class="band b-owner" id="owner"><div class="wrap owner">
+    <div class="ava" id="ava"></div>
+    <div>
+      <h2>Art Print egasi</h2>
+      <p class="oq" id="oq"></p>
+      <strong id="oname"></strong>
+      <div class="meta" id="orole"></div>
+    </div>
+  </div></section>
+
+  <section class="band b-contact" id="contact"><div class="wrap">
+    <h2>Aloqa</h2>
+    <div class="feats three">
+      <div class="feat"><div class="ico">📞</div><h3>Telefon</h3><p><a data-phone href="#"></a></p></div>
+      <div class="feat"><div class="ico">📍</div><h3>Manzil</h3><p data-addr></p></div>
+      <div class="feat"><div class="ico">🕘</div><h3>Ish vaqti</h3><p>Har kuni 09:00 – 20:00</p></div>
+    </div>
+  </div></section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div class="brand" style="color:#fff"><span data-logo="38"></span><span class="brandname">Art Print</span></div>
+    <div><a data-phone href="#"></a></div>
+    <div>© <span data-year></span> Art Print. Barcha huquqlar himoyalangan.</div>
+  </div>
+</footer>
+
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="drawer" aria-label="Savat" aria-hidden="true">
+  <div class="dhead"><h2>Savatingiz</h2><button class="x" id="closeCart" aria-label="Savatni yopish">&times;</button></div>
+  <div class="items" id="items"></div>
+  <div class="row" style="justify-content:space-between"><strong>Jami</strong><strong id="sum"></strong></div>
+  <button class="btn" id="checkout" style="margin-top:12px">Buyurtma berish</button>
+  <button class="rm" id="clear" style="margin-top:10px">Savatni tozalash</button>
+</aside>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="mtitle">
+  <div class="mbox" id="mbox"></div>
+</div>
+<div class="toast" id="toast" role="status"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
